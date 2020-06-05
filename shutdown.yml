@@ -1,0 +1,15 @@
+---
+
+- hosts: template-centos-7-prod
+  gather_facts: no
+  tasks:
+    - name: shutdown
+      become: yes
+      command: shutdown
+
+    - name: wait
+      delegate_to: "localhost"
+      wait_for:
+        port: "22"
+        state: "stopped"
+        host: "{{ ansible_host }}"
