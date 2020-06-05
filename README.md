@@ -10,7 +10,9 @@ This can be run from Windows or Linux.
 
 The first time you run this should be manually on your own machine. 
 
-1. Modify the main.tf file so it has the appropriate values for your vsphere instance. 
+1. Modify the main.tf file...
+    1. Needs the appropriate values for your vsphere instance.
+    1. Remove the backend section as you don't have Artifactory up and running yet. Once you do, add it back in.
 
 1. Look at the Jenkinsfile. Set every environment variable it sets, and execute the commands listed.
 
