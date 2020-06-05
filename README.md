@@ -9,9 +9,12 @@ This can be run from Windows or Linux.
 ### First Run
 
 The first time you run this should be manually on your own machine. 
-Look at the Jenkinsfile. Set every environment variable it sets, and execute the commands listed.
 
-If you're running on windows though, you won't be able to run the ansible playbook to shutdown
+1. Modify the main.tf file so it has the appropriate values for your vsphere instance. 
+
+1. Look at the Jenkinsfile. Set every environment variable it sets, and execute the commands listed.
+
+    1. If you're running on windows though, you won't be able to run the ansible playbook to shutdown
 the VM as ansible can't be installed on Windows. Instead, just log into vSphere and shutdown the VM
 by hand.
 
