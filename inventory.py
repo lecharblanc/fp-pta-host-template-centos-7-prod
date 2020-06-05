@@ -36,6 +36,10 @@ def create_inventory():
     host_vars = {}
     for name_host in list_hosts:
         host_vars[name_host] = {'ansible_host': terraform_output[name_host]['value']}
+        # A git hosting provider needs port 22 to for git to work properly.
+        # The OS level SSH connection can't use 22 then.
+        if "gitlab" in name_host.lower():
+            host_vars[name_host]['ansible_port'] = '2222'
     json_for_ansible['_meta'] = {'hostvars': host_vars}
 
     # Return the ansible json.
