@@ -2,6 +2,8 @@
 
 A terraform process that produces the 'golden' image you should base all your production systems on.
 
+For information about PTA and how to use it please visit https://github.com/Forcepoint/fp-pta-overview/blob/master/README.md
+
 ## Setup
 
 This can be run from Windows or Linux.
