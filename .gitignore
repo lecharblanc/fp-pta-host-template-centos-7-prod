@@ -5,3 +5,4 @@ crash.log
 terraform.tfplan
 terraform.tfstate*
 roles
+.wip
