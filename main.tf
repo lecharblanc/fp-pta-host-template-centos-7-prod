@@ -14,7 +14,7 @@ provider "vsphere" {
   # The released versions are listed here: https://github.com/terraform-providers/terraform-provider-vsphere/releases
   version        = "~> 1.15.0"
 
-  # If you have a self-signed cert
+  # If you have a self-signed cert .
   allow_unverified_ssl = true
 }
 
